@@ -1,0 +1,30 @@
+cc_binary {
+    name: "mp4_extract_h264",
+    srcs: ["mp4_extract_h264.cpp"],
+    header_libs: ["libmediametrics_headers"],
+    shared_libs: [
+        "libstagefright",
+        "liblog",
+        "libutils",
+        "libbinder",
+        "libstagefright_foundation",
+        "libcutils",
+        "libc",
+	"libbase",
+        "libcutils",
+        "libmediandk",
+        "libnativewindow",
+        "libutils",
+        "libbinder_ndk",
+    ],
+
+    include_dirs: [
+        "frameworks/av/media/libstagefright",
+        "frameworks/native/include/media/openmax",
+    ],
+
+    cflags: [
+        "-Wno-multichar",
+	"-Wno-unused-variable",
+    ],
+}

@@ -1,0 +1,30 @@
+cc_binary {
+    name: "aac_decode_pcm",
+    srcs: ["aac_decode_pcm.cpp"],
+    header_libs: ["libmediametrics_headers",
+		"libmediadrm_headers",
+    ],
+    shared_libs: [
+        "libstagefright",
+        "liblog",
+        "libutils",
+        "libbinder",
+        "libstagefright_foundation",
+        "libmedia",
+        "libcutils",
+        "libgui",
+        "libui",
+	"libmediadrm",
+	"libbase",
+	"libmediametrics",
+	"libmedia_omx",
+    ],
+    include_dirs: [
+        "frameworks/av/media/libstagefright",
+        "frameworks/native/include/media/openmax",
+    ],
+    cflags: [
+        "-Wno-multichar",
+        "-Wno-unused-variable",
+    ],
+}

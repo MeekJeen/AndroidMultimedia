@@ -1,0 +1,4 @@
+cc_binary {
+    name: "gpu_mmap",
+    srcs: ["gpu_mmap.cpp"],    
+}

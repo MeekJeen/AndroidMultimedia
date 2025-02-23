@@ -1,0 +1,23 @@
+cc_binary {
+    name: "opensles_playback",
+    srcs: ["opensles_playback.cpp"],
+    shared_libs: [
+        "libutils",
+        "liblog",
+        "libandroid",
+        "libOpenSLES",
+	"libutilscallstack",
+	"libmediametrics",
+    ],
+    cflags: [
+        "-Werror",
+        "-Wall",
+	"-Wno-unused-parameter",
+	"-Wno-unused-variable",
+	"-Wno-deprecated-declarations",
+	"-g",
+    ],
+    cppflags: [     
+	"-g",
+    ],
+}

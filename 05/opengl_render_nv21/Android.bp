@@ -1,0 +1,39 @@
+cc_binary {
+    name: "opengl_render_nv21",
+    srcs: ["opengl_render_nv21.cpp"],
+    shared_libs: [
+        "libstagefright",
+        "libmedia",
+        "libutils",
+        "libbinder",
+        "libstagefright_foundation",
+        "libgui",
+        "libcutils",
+        "liblog",
+        "libEGL",
+        "libGLESv2",
+        "libsync",
+	"libnativewindow",
+        "libui",
+        "libmediametrics",
+	"libnativedisplay",
+    ],
+    static_libs: [
+        "libstagefright_color_conversion",
+        "libyuv_static",
+    ],
+    include_dirs: [
+        "frameworks/av/media/libstagefright",
+        "frameworks/av/media/libstagefright/include",
+        "frameworks/native/include/media/openmax",
+    ],
+    cflags: [
+        "-Wno-multichar",
+	"-Wno-unused-variable",
+	"-Wno-unused-parameter",
+	"-Wno-unused-function",
+    ],
+    header_libs: [
+        "libnativedisplay_headers",
+    ],
+}

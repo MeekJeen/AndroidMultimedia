@@ -1,0 +1,32 @@
+cc_binary {
+    name: "yuv_encode_h264",
+    srcs: ["yuv_encode_h264.cpp"],
+    shared_libs: [
+        "libstagefright",
+        "liblog",
+        "libutils",
+        "libbinder",
+        "libstagefright_foundation",
+        "libmedia",
+        "libcutils",
+        "libmediametrics",
+	"libcodec2",
+	"libmedia_omx",
+        "libsfplugin_ccodec",
+	"libgui",
+    ],
+    include_dirs: [
+        "frameworks/av/media/libstagefright",
+        "frameworks/native/include/media/openmax",
+    ],
+
+    header_libs: [
+        "libmediadrm_headers",
+        "libmediametrics_headers",
+    ],
+
+    cflags: [
+    	 "-Wno-unused-variable",
+	 "-Wno-unused-parameter",
+    ],
+}

@@ -1,0 +1,14 @@
+cc_binary {
+    name: "aaudio_playback",
+    srcs: ["aaudio_playback.cpp"],
+    shared_libs: [
+	"libaaudio",
+	"libandroid",
+    ],
+    cflags: [
+    "-Werror",
+    "-Wall",
+    "-Wno-unused-parameter",
+    "-Wno-unused-variable",
+    "-Wno-deprecated-declarations",],
+}

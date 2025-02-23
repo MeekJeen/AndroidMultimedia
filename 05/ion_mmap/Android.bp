@@ -1,0 +1,12 @@
+cc_binary {
+    name: "ion_mmap",
+    srcs: ["ion_mmap.cpp"],
+    shared_libs: [
+        "libbinder",
+        "libcutils",
+        "liblog",
+        "libutils",
+	"libbinder",
+    ],
+    compile_multilib: "64",
+}

@@ -1,0 +1,19 @@
+cc_binary {
+    name: "normal_render",
+    srcs: ["normal_render.cpp"],
+    shared_libs: [
+        "libcutils",
+        "libEGL",
+        "libGLESv2",
+        "libui",
+        "libgui",
+        "libutils",
+    ],
+    static_libs: ["libglTest"],
+    cflags: [
+	"-Wno-unused-parameter",
+	"-Wno-unused-const-variable",
+	"-Wno-unused-variable",
+	"-Wno-uninitialized",
+    ],
+}

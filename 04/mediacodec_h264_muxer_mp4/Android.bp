@@ -1,0 +1,31 @@
+cc_binary {
+    name: "h264_muxer_mp4",
+    srcs: ["h264_muxer_mp4.cpp"],
+    header_libs: ["libmediametrics_headers"],
+    shared_libs: [
+        "libstagefright",
+        "liblog",
+        "libutils",
+        "libbinder",
+        "libstagefright_foundation",
+        "libcutils",
+        "libc",
+	"libbase",
+        "libcutils",
+        "libmediandk",
+        "libnativewindow",
+        "libutils",
+        "libbinder_ndk",
+    ],
+
+    include_dirs: [
+        "frameworks/av/media/libstagefright",
+        "frameworks/native/include/media/openmax",
+    ],
+
+    cflags: [
+        "-Wno-multichar",
+	"-Wno-unused-variable",
+    ],
+}
+

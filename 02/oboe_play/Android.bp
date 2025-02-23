@@ -1,0 +1,27 @@
+cc_binary {
+    name: "oboe_playback",
+    srcs: [
+        "oboe_playback.cpp",
+    ],
+    sdk_version: "current",
+    stl: "libc++_static",
+    header_libs: ["jni_headers"],
+    include_dirs: [
+        "external/oboe/include",
+    ],
+    shared_libs: [
+        "liblog",
+        "libOpenSLES",
+	"libaaudio",
+	"libandroid",
+    ],
+    static_libs: [
+        "oboe",
+    ],
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wno-unused-parameter",
+        "-Wno-unused-variable",
+	"-Wno-deprecated-declarations",],
+}

@@ -1,0 +1,17 @@
+cc_binary {
+    name: "offscreen_render",
+    srcs: ["offscreen_render.cpp"],
+    shared_libs: [
+        "libcutils",
+        "libEGL",
+        "libGLESv2",
+        "libui",
+        "libgui",
+        "libutils",
+    ],
+    cflags: [
+	"-Wno-unused-parameter",
+	"-Wno-unused-const-variable",
+	"-Wno-unused-variable",
+    ],
+}

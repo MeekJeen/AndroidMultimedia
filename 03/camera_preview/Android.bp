@@ -1,0 +1,28 @@
+cc_test {
+    name: "camera_recoder",
+    srcs: ["camera_recorder.cpp"],
+    shared_libs: [
+        "liblog",
+        "libutils",
+        "libcutils",
+        "libcamera_metadata",
+        "libcamera_client",
+        "libgui",
+        "libsync",
+        "libui",
+        "libdl",
+        "libbinder",
+    ],
+
+    cflags:[
+	"-Wno-unused-variable",
+	"-Wno-unused-parameter",
+	"-Wno-unused-function",	
+    ],
+    include_dirs: [
+        "system/media/private/camera/include",
+        "system/media/camera/tests",
+        "frameworks/av/services/camera/libcameraservice",
+    ],
+
+}

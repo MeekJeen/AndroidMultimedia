@@ -1,0 +1,30 @@
+cc_test {
+    name: "fence",
+    srcs: [
+        "fence.cpp",
+    ],
+    cflags: [
+        "-DGL_GLEXT_PROTOTYPES",
+        "-DEGL_EGLEXT_PROTOTYPES",
+    ],
+    cppflags: [
+        "-Wno-unused-variable",
+	"-Wno-uninitialized",
+    ],
+    shared_libs: [
+    	"libbase",
+        "libcutils",
+        "libEGL",
+        "libGLESv2",
+	"libsync",
+	"libGLESv1_CM",
+        "libGLESv2",
+        "libui",
+        "libgui",
+        "libutils",
+	"libandroid",
+	"libnativewindow",
+        "libprocessgroup",
+    ],
+    static_libs: ["libglTest"],
+}
